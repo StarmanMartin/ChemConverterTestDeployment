@@ -1,0 +1,13 @@
+services:
+  app:
+    image:  mstarman/chem-converter-test:0.0.1
+    env_file:
+      - ./.env
+    ports: # expose default rails port to host machine
+      - ${PROJECT_WEB_PORT:-4000}:80
+    volumes:
+      - ./converter/profiles/profiles:/var/share/profiles
+      - ./converter/datasets:/var/share/datasets
+      - ./converter/logs:/var/log/converter
+      - ./converter/htpasswd:/var/share/htpasswd
+      - ./converter/shell_scripts:/shell_scripts
