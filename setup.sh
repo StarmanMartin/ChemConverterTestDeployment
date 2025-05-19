@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Make sure docker and apache2-utils is installed"
+echo "Make sure docker and curl is installed"
 # Prompt the user for each environment variable, with default values
 
 read -p "Enter public URL [https://0.0.0.0:8071/]: " CONVERTER_URL
@@ -46,4 +46,8 @@ curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeploym
 
 cd ..
 read -p "Enter converter htpasswd user: " HTPASSWD_USER
-htpasswd -c htpasswd $HTPASSWD_USER
+echo
+read -s -p "Enter $HTPASSWD_USER password: " HTPASSWD_PASS
+echo
+sha1=$(printf "$HTPASSWD_PASS" | openssl sha1 -binary | base64)
+echo "$HTPASSWD_USER:{SHA}$sha1" >> htpasswd
