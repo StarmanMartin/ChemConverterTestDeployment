@@ -26,7 +26,9 @@ We provide an installation script that has only been tested on Ubuntu. However, 
 Run:
 
 ```shell
-curl -sSL https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/setup.sh | bash
+curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/setup.sh
+chmod +x setup.sh
+./setup.sh
 ```
 
 ### By Hand
