@@ -11,7 +11,8 @@ Please shut down the container after you're done!**
 
 This repository provides a Dockerfile to build a Docker image that allows you to quickly and easily deploy Chem Converter (App & Client) in a test environment.
 The content is automatically updated after each new commit on the selected branches.
--> __No Webhooks are needed__: easy to set up and you do not need the privileges!
+
+-> __No webhooks are needed!__ It is easy to set up and you do not require any privileges.
 
 The prebuilt image is available on Docker Hub:
 ```mstarman/chem-converter-test:0.0.2```
