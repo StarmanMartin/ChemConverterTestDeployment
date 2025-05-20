@@ -12,15 +12,15 @@ INTERVAL=${UPDATE_INTERVAL:-600}            # Seconds between checks
 
 echo "" > client_last_commit.txt
 echo "" > app_last_commit.txt
-echo "" > pidfile.txt
+echo "" > $PIDFILE
 last_process=""
 
 while true; do
     source ./set_git_branch.sh
-    client_new_commit=$(curl -s "https://api.github.com/repos/$CLIENT_REPO/commits/$CLIENT_BRANCH" | jq -r .sha)
-    app_new_commit=$(curl -s "https://api.github.com/repos/$APP_REPO/commits/$APP_BRANCH" | jq -r .sha)
-
-    if [[ "$client_new_commit" != $(cat client_last_commit.txt) ]] || [[ "$app_new_commit" != $(cat app_last_commit.txt) ]]; then
+    client_new_commit=$(git ls-remote https://github.com/$CLIENT_REPO.git refs/heads/$CLIENT_BRANCH)
+    app_new_commit=$(git ls-remote https://github.com/$APP_REPO.git refs/heads/$APP_BRANCH)
+    PID=$(cat $PIDFILE)
+    if ! ps -p $PID > /dev/null || [[ "$client_new_commit" != $(cat client_last_commit.txt) ]] || [[ "$app_new_commit" != $(cat app_last_commit.txt) ]]; then
         echo "[$(date)] New commit detected: CLIENT: $client_new_commit & APP: $app_new_commit"
 
         echo "$client_new_commit" > client_last_commit.txt
@@ -28,7 +28,7 @@ while true; do
 
 
         source ./run_scripts.sh
-        kill -TERM -$(cat pidfile.txt)
+        kill -TERM -$PID
         setsid ./run.sh &
     fi
     sleep $INTERVAL

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $$ > pidfile.txt
+echo $$ > $PIDFILE
 
 clone_repo () {
   LOCALREPO_VC_DIR=$3/.git
@@ -17,8 +17,6 @@ clone_repo () {
 REPO=https://github.com/ComPlat/chemotion-converter-client.git
 LOCALREPO=/srv/converter/chemotion-converter-client
 CLIENT_BRANCH=${CLIENT_BRANCH:-master}
-
-
 
 echo "|================================================================================|"
 echo "|  Cloning chemotion-converter-client Branch: ${CLIENT_BRANCH}  "
