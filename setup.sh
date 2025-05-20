@@ -44,10 +44,11 @@ curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeploym
 cd converter/shell_scripts
 curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/shell_scripts/example.sh
 
+cd ..
+
 curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/APP_BRANCH.txt
 curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/shell_scripts/CLIENT_BRANCH.txt
 
-cd ..
 read -p "Enter converter htpasswd user: " HTPASSWD_USER
 echo
 read -s -p "Enter $HTPASSWD_USER password: " HTPASSWD_PASS
