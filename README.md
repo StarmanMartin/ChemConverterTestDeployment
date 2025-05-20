@@ -47,24 +47,30 @@ chmod +x setup.sh
 
    * This directory must contain the following subdirectories (you can also clone them from this repo):
 
-   * Make sure you have the ```shell_script/set_branch.sh`` from this repo 
+   * Make two text files in the *converter* directory: ```APP_BRANCH.txt``` and ```CLIENT_BRANCH.txt```
+
+   * Make sure you have the ```shell_script/example.sh`` from this repo 
 
 ```
 converter/
-├── dataset/
-├── logs/
-├── profiels/
-├── shell_script/
-      ├── set_branch.sh
-      └── ...
-└── htpasswd
+   ├── dataset/
+   ├── logs/
+   ├── profiels/
+   ├── shell_script/
+         ├── set_branch.sh
+         └── ...
+   ├── APP_BRANCH.txt
+   ├── CLIENT_BRANCH.txt
+   └── htpasswd
 
 ```
 
 Description of each folder:
 
+* ```CLIENT_BRANCH.txt```: The GIT repo branch for the client. This branch is monitored and if there is a new commit, the server is automatically updated.
+* ```APP_BRANCH.txt```: The GIT repo branch for the app. This branch is monitored and if there is a new commit, the server is automatically updated.
 * ```shell_script/```: Any .sh scripts in this folder will be executed on container restart. This is useful for tasks such as installing packages (apt install ...) or updating environment variables.
 
 ## Switching Branches
 
-To change the deployed Converter (App or Client) branch, modify the **APP_BRANCH** or **CLIENT_BRANCH** variable in the **set_branch.sh** script inside the **shell_script/** folder.
+To change the deployed Converter (App or Client) branch, modify the first line in the **APP_BRANCH.txt** or **CLIENT_BRANCH.txt**.

@@ -55,7 +55,7 @@ LOG_ROOT=/var/log/converter
 if [ -d "$LOG_ROOT" ]
   then
     cd "$LOG_ROOT"
-    rm "*"
+    rm ./*
   fi
 
 cd $LOCALREPO

@@ -1,15 +1,12 @@
 #!/bin/bash
 
 ./prepare-asdf.sh
-source ./run_scripts.sh
 
 #!/bin/bash
 
 CLIENT_REPO="ComPlat/chemotion-converter-client"
-CLIENT_BRANCH=${CLIENT_BRANCH:-master}
 
 APP_REPO="ComPlat/chemotion-converter-app"
-APP_BRANCH=${APP_BRANCH:-main}
 
 INTERVAL=${UPDATE_INTERVAL:-600}            # Seconds between checks
 
@@ -19,6 +16,7 @@ echo "" > pidfile.txt
 last_process=""
 
 while true; do
+    source ./set_git_branch.sh
     client_new_commit=$(curl -s "https://api.github.com/repos/$CLIENT_REPO/commits/$CLIENT_BRANCH" | jq -r .sha)
     app_new_commit=$(curl -s "https://api.github.com/repos/$APP_REPO/commits/$APP_BRANCH" | jq -r .sha)
 

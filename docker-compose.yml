@@ -1,6 +1,7 @@
 services:
   app:
-    image:  mstarman/chem-converter-test:0.0.2
+    image:  mstarman/chem-converter-test:0.0.3
+    build: .
     env_file:
       - ./.env
     ports: # expose default rails port to host machine
@@ -11,3 +12,5 @@ services:
       - ./converter/logs:/var/log/converter
       - ./converter/htpasswd:/var/share/htpasswd
       - ./converter/shell_scripts:/shell_scripts
+      - ./converter/CLIENT_BRANCH.txt:/var/share/CLIENT_BRANCH.txt
+      - ./converter/APP_BRANCH.txt:/var/share/APP_BRANCH.txt

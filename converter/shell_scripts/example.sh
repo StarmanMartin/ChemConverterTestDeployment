@@ -9,6 +9,3 @@ echo "
 ##       ##     ## ##   ###      ####      ##       ## ##       ##     ##       ## ##      ###
  ######   #######  ##    ##       ##       ######## ##  ##      ##     ######## ##  ##     ###
 "
-
-export APP_BRANCH=dev
-export CLIENT_BRANCH=master

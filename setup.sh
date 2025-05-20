@@ -42,7 +42,10 @@ echo "Downloading missing files!"
 
 curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/docker-compose.yml
 cd converter/shell_scripts
-curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/shell_scripts/set_branch.sh
+curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/shell_scripts/example.sh
+
+curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/APP_BRANCH.txt
+curl -O https://raw.githubusercontent.com/StarmanMartin/ChemConverterTestDeployment/main/converter/shell_scripts/CLIENT_BRANCH.txt
 
 cd ..
 read -p "Enter converter htpasswd user: " HTPASSWD_USER
