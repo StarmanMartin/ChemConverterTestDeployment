@@ -2,8 +2,6 @@
 
 ./prepare-asdf.sh
 
-#!/bin/bash
-
 CLIENT_REPO="ComPlat/chemotion-converter-client"
 
 APP_REPO="ComPlat/chemotion-converter-app"
@@ -13,7 +11,6 @@ INTERVAL=${UPDATE_INTERVAL:-600}            # Seconds between checks
 echo "" > client_last_commit.txt
 echo "" > app_last_commit.txt
 echo "" > $PIDFILE
-last_process=""
 
 while true; do
     source ./set_git_branch.sh
