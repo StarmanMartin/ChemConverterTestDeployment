@@ -23,7 +23,7 @@ The included docker-compose.yml file demonstrates how to use the image.
 
 We provide an installation script that has only been tested on Ubuntu. However, you can also set it up manually in just a few steps
 
-## Ubuntu install script
+### Ubuntu install script
 
 Run:
 
