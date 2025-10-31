@@ -1,6 +1,6 @@
 services:
   app:
-    image:  mstarman/chem-converter-test:0.0.4
+    image:  mstarman/chem-converter-test:0.0.5
     build: .
     env_file:
       - ./.env
