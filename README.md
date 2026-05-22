@@ -15,13 +15,14 @@ The content is automatically updated after each new commit on the selected branc
 -> __No webhooks are needed!__ It is easy to set up and you do not require any privileges.
 
 The prebuilt image is available on Docker Hub:
-```mstarman/chem-converter-test:0.0.4```
+```mstarman/chem-converter-test:0.0.7```
 
 The included docker-compose.yml file demonstrates how to use the image.
 
 ## 🛠️ Getting Started
 
-We provide an installation script that has only been tested on Ubuntu. However, you can also set it up manually in just a few steps
+We provide an installation script that has only been tested on Ubuntu. However,
+you can also set it up manually in just a few steps
 
 ### Ubuntu install script
 

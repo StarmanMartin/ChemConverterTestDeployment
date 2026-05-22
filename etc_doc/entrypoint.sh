@@ -28,6 +28,11 @@ while true; do
         kill -TERM -$PID
         setsid ./run.sh &
     fi
+    if [ "$NO_AUTO_UPDATE" = "true" ]; then
+      while true; do
+        sleep 3600
+      done
+    fi
     sleep $INTERVAL
 done
 

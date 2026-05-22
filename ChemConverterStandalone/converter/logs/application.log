@@ -1,0 +1,21 @@
+INFO:converter_app.validation:✅ b3a552c7-0e88-486d-b808-c8056a132964.json
+DEBUG:converter_app.converters:file_name=OpenLab (1).tar.gz content_type=application/gzip mime_type=application/gzip encoding=binary
+DEBUG:converter_app.converters:For reader GcdReader -> result=False
+DEBUG:converter_app.converters:For reader StoeRawReader -> result=False
+DEBUG:converter_app.converters:For reader TvbReader -> result=False
+DEBUG:converter_app.converters:For reader HplcReader -> result=False
+DEBUG:converter_app.converters:For reader VsiReader -> result=False
+DEBUG:converter_app.converters:For reader MprReader -> result=False
+DEBUG:converter_app.converters:For reader UXDReader -> result=False
+DEBUG:converter_app.converters:For reader CifReader -> result=False
+DEBUG:converter_app.converters:For reader AfmReader -> result=False
+DEBUG:converter_app.converters:For reader PsSessionReader -> result=False
+DEBUG:converter_app.converters:For reader BrmlReader -> result=False
+DEBUG:converter_app.converters:For reader XMLReader -> result=False
+DEBUG:converter_app.converters:For reader CsmReader -> result=None
+DEBUG:converter_app.converters:For reader LcmsReader -> result=True
+INFO:converter_app.validation:✅ b3a552c7-0e88-486d-b808-c8056a132964.json
+INFO:converter_app.validation:✅ b3a552c7-0e88-486d-b808-c8056a132964.json
+INFO:converter_app.validation:✅ b3a552c7-0e88-486d-b808-c8056a132964.json
+INFO:converter_app.validation:✅ b3a552c7-0e88-486d-b808-c8056a132964.json
+INFO:converter_app.validation:✅ b3a552c7-0e88-486d-b808-c8056a132964.json

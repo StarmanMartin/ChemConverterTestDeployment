@@ -1,2 +1,5 @@
 /.env
 /converter/logs/
+/ChemConverterStandalone/.env
+/ChemConverterStandalone/converter/profiles/A/b3a552c7-0e88-486d-b808-c8056a132964.json
+/ChemConverterStandalone/ChemConverterDocker.zip

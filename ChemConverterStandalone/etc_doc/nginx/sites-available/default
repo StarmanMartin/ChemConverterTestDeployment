@@ -2,16 +2,6 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-    # Application timeouts
-    proxy_connect_timeout 3000s;
-    proxy_send_timeout    3000s;
-    proxy_read_timeout    3000s;
-    send_timeout          3000s;
-
-    # Client timeouts
-    client_body_timeout   3000s;
-    client_header_timeout 3000s;
-
     client_max_body_size 500M;
 	root /var/www/html;
 
